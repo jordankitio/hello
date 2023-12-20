@@ -1,32 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eng">
     <head>
-       <title> HELLO</title>
-       <style>
-          .hello{
-            color: blue;
-            padding: 10px 15px;
-            background-color: aquamarine;
-            width: 200px;
+        <title>
+           Google
+        </title>
+        
+        <style>
 
+            .topmenu{
+                position:fixed;
+                top: 0;
+                left:0;
+                height: 50px;
+                width: 100%;
+                background-color: black;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .bottommenu{
+                position: fixed;
+                bottom: 0;
+                left:0;
+                width: 100%;
+                background-color: black;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .main{
+                position: fixed;
+                top: 50px;
+                bottom: 50px;
+                left:0;
+                width: 100%;
+                background-color: #333; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center ; /* packs item in the center */
+                padding-top: 50px;
+                padding-bottom: 50px;
+                
+            }
+     
+            .google {
+                text-align: center;
+                /* line-height: 500px; */
+                font-family: Roboto, arial, sans-serif;
+                color: aliceblue;
+                margin: 0; /* Remove default margins */
+                /* margin-bottom: 200px; Adjust this value to push it up or down */
+                font-size: clamp(30px,8vw, 110px);
+                /* margin-right: 85px; */
+                
+            }
 
+            /* Media query for smaller screens */
+            @media (max-width: 600px) {
 
+                .google{
+                    font-size: 6vw; /* adjust this value as necessary */
+                }
+            }
 
+/* If you want to add another breakpoint for even smaller screens */
+            @media (max-width: 400px) {
+                .google-logo {
+                     font-size: 5vw; /* adjust this value as necessary */
+                }
+            }
 
-          }
+            
+    
+            .extralink{
+                font-family: Roboto, arial, sans-serif;
+                line-height: 50px;
+                color: rgb(194, 194, 194);
+                padding: 50px 15px;
+                font-weight: 200;  
+                background-color: #000000;  
+                text-decoration: none;  
+                transition: box-shadow 0.3s, background-color 0.3s  Smooth transition for hover effect
+            }
+            .extralink:hover{
+                background-color: #333;
+            }
+            .search-form{
+                /* position: absolute;
+                top: 50%;  
+                left: 50%; 
+                transform: translate(-50%, -50%); 
+                width: 100%; 
+                text-align: center;  */
+                margin-top: 20px;  /* Add some space between the Google logo and the search bar */
 
+            }
+            
+            .search-input{
+                width: 300px;
+                padding: 10px 20px;
+                border: 1px solid #ccc;
+                border-radius: 25px;
+                outline: none;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+            .search-button {
+                padding: 10px 20px;
+                background-color: #4285f4;  /* Google's blue color */
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 15%;
+            }
+            
 
-       </style>
-      
+ 
 
+        </style>
+    
     </head>
 
     <body>
-        <H1> Welcome to my website.</H1>
-    
-        <h2 class="hello">Hello y'all </h2>
+       <div class="topmenu"> 
+        
+            <div class="leftbox">
+                <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" id="EL1" class="extralink"> About</a>
+                <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US" id="EL2" class=extralink>Store</a>
+             </div>
+        
+            <div class="rightbox">
+                <a href="https://mail.google.com/mail/?authuser=0&ogbl" id="EL3"  class=extralink>Gmail</a>
+                <a href="IMAGE PLACE HOLDER" id="EL4" class=extralink>IMAGE PLACE HOLDER</a>
+            </div>
 
-            i hope you like my page
-       
+       </div>
+
+       <div class="bottommenu">
+        
+        <div class="bleftbox">
+            <a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"  class="extralink"> Advertizing</a>
+            <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" class=extralink>Business</a>
+            <a href="https://google.com/search/howsearchworks/?fg=1" class=extralink>How Search works</a>
+         </div>
+    
+        <div class="bmiddlebox">
+            <a href="https://sustainability.google/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=" class=extralink>Our third decade of climate action: join us</a>
+        </div>
+    
+         <div class="brightbox">
+            <a href="https://policies.google.com/privacy?hl=en&fg=1"  class="extralink">Privacy</a>
+            <a href="https://policies.google.com/terms?hl=en&fg=1" class=extralink>Terms</a>
+         </div>
+
+
+
+       </div>
+
+       <div class="main">
+            
+        
+
+                <H1 class="google">Google</H1>
+                <form action="https://google.com/search" class="search-form">
+                    <input type="text" name="q" class="search-input">
+                    <input type="submit" value="GO" class="search-button">
+                </form>
+
+            
+       </div>
+
     </body>
 </html>
